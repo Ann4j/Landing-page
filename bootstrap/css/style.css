@@ -1,0 +1,390 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"),
+    url("../font/RobotoRegular.woff2") format("woff2"),
+    url("../font/RobotoRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Bold"),
+    url("../font/RobotoBold.woff2") format("woff2"),
+    url("../font/RobotoBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background: #fff;
+  min-width: 320px;
+}
+
+:root {
+  --backround-blue: #3F2AFF;
+  --backround-text-color: #212133;
+  --text-color: #666666;
+  --text-color-white: #fff;
+}
+
+
+/* glob */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* style */
+
+/* header */
+
+.header {
+  background: var(--backround-blue);
+  padding: 27px 0;
+}
+
+.header__content {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  gap: 27px;
+}
+
+.header__link {
+  color: var(--text-color-white);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* hero */
+
+.hero {
+  background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+  padding: 15px 0;
+}
+
+.hero__container {
+  background-image: url(../img/hero-img.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.hero__content {
+  padding: 115px 0;
+}
+
+.hero__title {
+  color: var(--text-color-white);
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+.hero__descr {
+  color: var(--text-color-white);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  /* 27px */
+  margin-bottom: 64px;
+}
+
+.hero__btn {
+  color: var(--text-color-white);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 23px 75px;
+  border-radius: 20px;
+  background: var(--backround-blue);
+}
+
+/* advantages */
+
+.advantages {
+  padding: 80px 0;
+}
+
+.advantages__content {
+  gap: 30px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.advantages__content::before {
+  content: " ";
+  background-image: url(../img/advan.svg);
+  width: 160px;
+  height: 142px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.advantages__info {
+  max-width: 585px;
+}
+
+.advantages__title {
+  color: #2E2B44;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.advantages__paragraph {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+}
+
+.advantages__descr {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  /* 19.2px */
+  margin: 0;
+  max-width: 240px;
+}
+
+.advantages__item {
+  align-items: center;
+  gap: 30px;
+}
+
+.advantages__item-before1::before {
+  content: " ";
+  background-image: url(../img/advan1.svg);
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.advantages__item-before2::before {
+  content: " ";
+  background-image: url(../img/advan2.svg);
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.advantages__item-before3::before {
+  content: " ";
+  background-image: url(../img/advan3.svg);
+  width: 77px;
+  height: 80px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* teacher */
+
+.teacher {
+  padding: 71px 0;
+  background: var(--backround-text-color);
+
+}
+
+.teacher__title {
+  color: var(--text-color-white);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.article__img {
+  border-radius: 22px 22px 0px 0px;
+  margin-bottom: 26px;
+}
+
+.article__title {
+  color: var(--text-color-white);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  /* 27px */
+  margin-bottom: 8px;
+}
+
+.article__descr {
+  color: #85859B;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+}
+
+/* course */
+
+.course {
+  padding: 72px 0 80px 0;
+}
+
+.course__item {
+  min-height: 480px;
+}
+
+.course__title {
+  color: var(--backround-text-color);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.course__list {
+  gap: 30px 0;
+}
+
+.course__article-img1 {
+  background-image: url(../img/course1.png);
+}
+
+.course__article-img2 {
+  background-image: url(../img/course2.png);
+
+}
+
+.course__article-img3 {
+  background-image: url(../img/course3.png);
+}
+
+.course__article-img4 {
+  background-image: url(../img/course4.png);
+}
+
+.course__article {
+  padding: 210px 30px 30px 30px;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  height: 100%;
+  min-height: 480px;
+  background-color: #edf0f9;
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+}
+
+.card__title {
+  color: var(--backround-text-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  /* 27px */
+  margin-bottom: 10px;
+}
+
+.card__descr {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+  margin-bottom: 5px;
+}
+
+.card__btn {
+  color: var(--text-color-white);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  background: var(--backround-blue);
+  padding: 20px 59px;
+  align-self: start;
+  margin-top: auto;
+}
+
+.card__time {
+  position: absolute;
+  top: 10px;
+  left: 440px;
+  color: var(--text-color-white);
+  align-items: center;
+  gap: 3px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* footer */
+
+.footer__content {
+  background-color: #2E2B44;
+  padding: 28px 0;
+}
+
+.footer__list {
+  gap: 30px;
+  justify-content: center;
+}
+
+.footer__copyright {
+  padding: 5px 0;
+}
+
+.footer__descr {
+  text-align: center;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #2e2b44;
+
+}
